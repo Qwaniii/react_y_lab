@@ -3,7 +3,7 @@ const onResponce = (res) => {
   };
 
   const config = {
-    dataUrl: 'https://jsonplaceholder.typicode.com/users/',
+    dataUrl: 'https://jsonplaceholder.typicode.com',
   };
 
   class Api {
@@ -15,7 +15,17 @@ const onResponce = (res) => {
     //Auth
 
     getUsers(num) {
-      return fetch(`${this._dataUrl}/${num}`).then(onResponce);
+      return fetch(`${this._dataUrl}/users/${num}`).then(onResponce);
+    }
+
+    sendUsers(obj) {
+      return fetch(`${this._dataUrl}/posts`, {
+        method: 'POST',
+        body: JSON.stringify(obj),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      }).then(onResponce);
     }
   }  
 

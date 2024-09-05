@@ -7,6 +7,7 @@ import api from "../Api"
 export default function Auth() {
 
     const [user, setUser ] = useState("");
+    const [email, setEmail ] = useState("");
     const [isAuth, setIsAuth] = useState(false)
 
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm({
@@ -28,7 +29,13 @@ export default function Auth() {
         reset()
       }, [reset])
 
-    function authSend() {
+    function authSend(obj) {
+        console.log(obj)
+        api.sendUsers(obj)
+        .then((res) => {
+            console.log("user: " + res.email)
+            setEmail(res.email)
+        })
         let random = Math.ceil(Math.random() * 10)
         api.getUsers(random)
             .then((data) => {
@@ -81,10 +88,11 @@ export default function Auth() {
                 : 
                 (
                 <>
-                <div className='auth-form'>
+                <div style={{textAlign: "center"}} className='auth-form'>
                     <h3>
                         Привет, {user}
                     </h3>
+                    <div >твой email - {email}</div>
                     <input type="submit" className='auth-enter' value="Выйти" onClick={exit}></input>
                     </div>
                 </>)
