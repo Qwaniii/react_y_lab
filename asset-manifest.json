@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react_y_lab/static/css/main.712b2f0d.css",
-    "main.js": "/react_y_lab/static/js/main.94645d99.js",
+    "main.js": "/react_y_lab/static/js/main.a5bc5fba.js",
     "index.html": "/react_y_lab/index.html",
     "main.712b2f0d.css.map": "/react_y_lab/static/css/main.712b2f0d.css.map",
-    "main.94645d99.js.map": "/react_y_lab/static/js/main.94645d99.js.map"
+    "main.a5bc5fba.js.map": "/react_y_lab/static/js/main.a5bc5fba.js.map"
   },
   "entrypoints": [
     "static/css/main.712b2f0d.css",
-    "static/js/main.94645d99.js"
+    "static/js/main.a5bc5fba.js"
   ]
 }
