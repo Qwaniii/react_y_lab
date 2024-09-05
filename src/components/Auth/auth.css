@@ -1,0 +1,91 @@
+.auth-container {
+    height: 250px;
+    width: 500px;
+    background-color: rgba(255, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    animation: inner 1s ease;
+}
+
+.auth-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+}
+
+.auth-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.auth-login_email {
+    position: relative;
+}
+
+.login {
+    height: 28px;
+    padding: 5px 15px 0px 15px;
+    border-radius: 7px;
+    font-size: 14px;
+    color: black;
+    outline: none;
+    border: .3px solid rgba(128, 128, 128, 0.8);
+}
+
+.auth-label_email {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 14px;
+    transition: all .2s;
+}
+
+.login:not(:placeholder-shown)~.auth-label_email,
+.login:focus~.auth-label_email {
+    top: 2px;
+    font-size: 10px;
+    color: rgba(128, 128, 128, 0.7);
+}
+
+.login:focus, .login:hover {
+    border: .7px solid black;
+}
+
+.error {
+    position: absolute;
+    padding: 0;
+    color: red;
+    font-size: 12px;
+    bottom: -17px;
+    left: 10px;
+}
+
+.auth-enter { 
+    background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: .3px solid rgba(128, 128, 128, 0.8);
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+.auth-enter:hover {
+    border: .7px solid black;
+}
+
+@keyframes inner {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+    
+}
